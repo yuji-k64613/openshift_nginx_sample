@@ -5,7 +5,7 @@ RUN yum -y install epel-release; \
     yum -y install nginx
 RUN useradd start; \
     mkdir -p /var/www; \
-    echo 'Hello, World!' > /var/www/index.html; \
+    echo 'Hello, World!' > /var/www/index.html
 ADD nginx.conf /home/start/nginx.conf
 ADD init.sh /home/start/init.sh
 RUN chown start.start /home/start/nginx.conf; \
