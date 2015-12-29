@@ -1,4 +1,4 @@
 #!/bin/bash
 
-nginx -c /home/start/nginx.conf
+nginx -c /nginx.conf
 exec /bin/bash
