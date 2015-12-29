@@ -6,12 +6,12 @@ RUN yum -y install epel-release; \
 RUN useradd start; \
     mkdir -p /var/www; \
     echo 'Hello, World!' > /var/www/index.html; \
-    echo 'nginx -c /home/start/nginx.conf; /bin/bash' > /home/start/init.sh
 ADD nginx.conf /home/start/nginx.conf
+ADD init.sh /home/start/init.sh
 RUN chown start.start /home/start/nginx.conf; \
     chown start.start /home/start/init.sh; \
     chmod u+x /home/start/init.sh
 
 EXPOSE 8080
 USER start
-CMD "/home/start/init.sh"
+CMD ["/home/start/init.sh"]
