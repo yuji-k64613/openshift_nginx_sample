@@ -10,5 +10,6 @@ RUN chmod ugo+r /nginx.conf; \
     chmod ugo+rx /init.sh; \
     chmod -R ugo+r /var/www
 
+USER nginx
 EXPOSE 8080
 CMD ["/init.sh"]
