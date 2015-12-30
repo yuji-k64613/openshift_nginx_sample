@@ -1,4 +1,4 @@
-FROM centos7:latest
+FROM centos:7
 MAINTAINER E.Nakai
 
 RUN yum -y install epel-release; \
