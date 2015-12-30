@@ -1,4 +1,4 @@
-FROM registry.oso.example.com/project01/centos7:latest
+FROM registry.oso.example.com/project02/centos7:latest
 MAINTAINER E.Nakai
 
 RUN yum -y install epel-release; \
